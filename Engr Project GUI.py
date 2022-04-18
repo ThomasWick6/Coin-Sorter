@@ -26,6 +26,12 @@ class main(Frame):
         pennylabel = Label(self.master, text = "Number of pennies", font = ("Arial", 18)).place(x = 100, y = 200)
         penny = Label(self.master, text = "{}".format(pennys), font = ("Arial", 18), fg = "red").place(x = 180, y = 260)
         
+        
+        nicklelabel = Label(self.master, text = "Number of nickles", font = ("Arial", 18)).place(x = 200, y = 200)
+        nickle = Label(self.master, text = "{}".format(nickles), font = ("Arial", 18), fg = "red").place(x = 280, y = 260)
+        
+        
+        
 
 
 
@@ -41,14 +47,23 @@ def penny():
     return pennys
 pennys = penny()
 
+
 def nickle():
-    pass
+    nickles = 11
+    return nickles 
+nickles = nickle()
+
 
 def dime():
-    pass
+    dimes = 9
+    return dimes
+dimes = dime()
+
 
 def quarter():
-    pass
+    quarters = 14
+    return quarters
+quarters = quarter()
 
 
 

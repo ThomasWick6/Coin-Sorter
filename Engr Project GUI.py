@@ -2,7 +2,7 @@
 ##GUI##
 from tkinter import *
 
-WIDTH = 1200  #width/hight
+WIDTH = 1200  #width/hight          #sets width, hight, and name for person who it's for
 HEIGHT = 800
 name = "Tommy"
 
@@ -10,7 +10,7 @@ name = "Tommy"
 
 #Main GUI class
 class main(Frame): 
-    def __init__(self, master):
+    def __init__(self, master):               #Main class in order to set up GUI
         Frame.__init__(self, master)
         self.master = master
 
@@ -21,7 +21,7 @@ class main(Frame):
         
 
         totallabel = Label(self.master, text = "Your total balance", font = ("Arial", 18)).place(x = 470, y = 80)
-        total = Label(self.master, text = "${}".format(balance), font = ("Arial", 18), fg = "red").place(x = 500, y = 120)
+        total = Label(self.master, text = "${}".format(balance), font = ("Arial", 18), fg = "red").place(x = 500, y = 120)      #The 
 
         pennylabel = Label(self.master, text = "Number of pennies", font = ("Arial", 18)).place(x = 200, y = 200)
         penny = Label(self.master, text = "{}".format(pennys), font = ("Arial", 18), fg = "red").place(x = 270, y = 260)

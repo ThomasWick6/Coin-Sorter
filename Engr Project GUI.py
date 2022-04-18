@@ -28,7 +28,7 @@ class main(Frame):
         
         
         nicklelabel = Label(self.master, text = "Number of nickles", font = ("Arial", 18)).place(x = 350, y = 200)
-        nickle = Label(self.master, text = "{}".format(nickles), font = ("Arial", 18), fg = "red").place(x = 380, y = 260)
+        nickle = Label(self.master, text = "{}".format(nickles), font = ("Arial", 18), fg = "red").place(x = 420, y = 260)
         
         
         dimelabel = Label(self.master, text = "Number of dimes", font = ("Arial", 18)).place(x = 600, y = 200)
@@ -36,7 +36,7 @@ class main(Frame):
         
         
         quarterlabel = Label(self.master, text = "Number of quarters", font = ("Arial", 18)).place(x = 850, y = 200)
-        quarter = Label(self.master, text = "{}".format(quarters), font = ("Arial", 18), fg = "red").place(x = 880, y = 260)        
+        quarter = Label(self.master, text = "{}".format(quarters), font = ("Arial", 18), fg = "red").place(x = 910, y = 260)        
         
 
 

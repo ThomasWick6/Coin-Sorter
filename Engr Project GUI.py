@@ -20,11 +20,11 @@ class main(Frame):
         welcome = Label(self.master, text = "Welcome, {}!".format(name), font = ("Arial", 20),).place(x = 470, y = 50)
         
 
-        totallabel = Label(self.master, text = "Your total balance", font = ("Arial", 18)).place(x = 470, y = 80)
+        totallabel = Label(self.master, text = "Your total balance", font = ("Arial", 18)).place(x = 490, y = 80)
         total = Label(self.master, text = "${}".format(balance), font = ("Arial", 18), fg = "red").place(x = 500, y = 120)      #The 
 
-        pennylabel = Label(self.master, text = "Number of pennies", font = ("Arial", 18)).place(x = 200, y = 200)
-        penny = Label(self.master, text = "{}".format(pennys), font = ("Arial", 18), fg = "red").place(x = 270, y = 260)
+        pennylabel = Label(self.master, text = "Number of pennies", font = ("Arial", 18)).place(x = 100, y = 200)
+        penny = Label(self.master, text = "{}".format(pennys), font = ("Arial", 18), fg = "red").place(x = 180, y = 260)
         
 
 

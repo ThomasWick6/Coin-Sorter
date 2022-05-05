@@ -19,17 +19,18 @@ name = "Tommy"
 
 arduino = serial.Serial(port='COM3', baudrate=57600, timeout=.1)
 
-
-time.sleep(20)
+time.sleep(10)
 def ar_read():
     while True:
         val = 'p'
         arduino.write(bytes(val,'utf-8'))
+        print("call")
+        time.sleep(1)
     
-        time.sleep(0.05)
+        
     
         listdata = []
-        for n in range(1000):
+        for n in range(10):
         
             data = arduino.readline()
             print (data)
@@ -38,8 +39,8 @@ def ar_read():
             
                 listdata.append(fdata)
 
-                if (len(listdata)==4):
-                    break
+#                if (len(listdata)==4):
+ #                   break
             
             except:
                 pass

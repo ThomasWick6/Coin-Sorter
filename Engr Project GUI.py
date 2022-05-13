@@ -1,15 +1,17 @@
 #######
+#Thomas Wick, Garret Sepulvado, Elizabeth Woodard, Andrew Posey
+#Smart piggy bank Python Code
 ##GUI##
 
 from tkinter import *
-
+ #libraries
 import serial
 import time
 
 global dval,pval,nval,qval
 dval = 2.27
 pval = 2.5
-nval = 5.0
+nval = 5.0       #gram values of coins
 qval = 5.67
 
 
@@ -17,7 +19,7 @@ WIDTH = 800  #width/hight          #sets width, hight, and name for person who i
 HEIGHT = 600
 name = "Tommy"
 
-arduino = serial.Serial(port='COM3', baudrate=57600, timeout=.1)
+arduino = serial.Serial(port='COM3', baudrate=57600, timeout=.1)      #connects port to arduino
 time.sleep(10)
 
 def ar_read():
@@ -26,7 +28,7 @@ def ar_read():
     while True:
         val = 'p'
         arduino.write(bytes(val,'utf-8'))
-        print("call")
+        print("call") #so i can know if it reads
         time.sleep(1)
     
         
@@ -37,8 +39,8 @@ def ar_read():
             data = arduino.readline()
             print (data)
             try:
-                fdata = float(data)
-            
+                fdata = float(data)       #gets data from load cells repeatidly 
+             
                 listdata.append(fdata)
 
                 if (len(listdata)==4):
@@ -50,7 +52,7 @@ def ar_read():
             break
     ndata = len(listdata)   
     d1 = float(listdata[ndata-4])
-    p1 = float(listdata[ndata-3])
+    p1 = float(listdata[ndata-3])       #Lines up all 4 load cells with correct coin
     n1 = float(listdata[ndata-2])
     q1 = float(listdata[ndata-1])
             
@@ -99,11 +101,12 @@ class main(Frame):
         quarterlabel = Label(self.master, text = "Quarters", font = ("Arial", 18)).place(x = 550, y = 200)
         quarter = Label(self.master, text = "{}".format(quarters), font = ("Arial", 18), fg = "red").place(x = 610, y = 260)        
 
+        #all the lables of GUI
         
 def runbank():
     
     U.GUI()
-    window.after(1000,runbank)
+    window.after(1000,runbank)    #run and rerset GUI with values
     
 
 window = Tk()
@@ -113,8 +116,6 @@ U = main(window)
 U.GUI()
 runbank()
 window.mainloop()
-
-
 
 
 
